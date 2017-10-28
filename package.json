@@ -1,0 +1,24 @@
+{
+  "name": "herdsman-backend",
+  "version": "1.0.0",
+  "description": "mongo,express,nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binbobo/herdsman-backend.git"
+  },
+  "keywords": [
+    "mongo",
+    "express",
+    "nodejs"
+  ],
+  "author": "wangbin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/binbobo/herdsman-backend/issues"
+  },
+  "homepage": "https://github.com/binbobo/herdsman-backend#readme"
+}
