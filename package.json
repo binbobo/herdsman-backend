@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/binbobo/herdsman-backend/issues"
   },
-  "homepage": "https://github.com/binbobo/herdsman-backend#readme"
+  "homepage": "https://github.com/binbobo/herdsman-backend#readme",
+  "dependencies": {
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "serve-favicon": "^2.4.5"
+  },
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^3.9.1"
+  }
 }
