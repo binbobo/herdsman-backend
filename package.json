@@ -11,7 +11,7 @@
     "url": "git+https://github.com/binbobo/herdsman-backend.git"
   },
   "keywords": [
-    "mongo",
+    "mongodb",
     "express",
     "nodejs"
   ],
@@ -22,12 +22,15 @@
   },
   "homepage": "https://github.com/binbobo/herdsman-backend#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "express": "^4.16.2",
+    "mongoose": "^4.12.5",
     "serve-favicon": "^2.4.5"
   },
   "devDependencies": {
     "del": "^3.0.0",
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-sequence": "^0.4.6"
   }
 }
