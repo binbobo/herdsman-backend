@@ -1,15 +1,15 @@
-var mongoose = require('mongoose');
-var UserSchema = require('../models/user.model');
+const mongoose = require('mongoose');
+const UserSchema = require('../models/user.model');
 
-var login = function (req, res) {
+const login = function (req, res) {
   res.send('user login');
 };
 
-var create = function (req, res) {
+const register = function (req, res) {
   res.send('user register');
 };
 
 module.exports = {
   login: login,
-  create: create,
+  register: register,
 };

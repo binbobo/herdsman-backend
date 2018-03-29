@@ -1,22 +1,22 @@
-var http = require('http');
-var express = require('express');
-var app = express();
-var path = require('path');
-var favicon = require('serve-favicon');
+const http = require('http');
+const express = require('express');
+const app = express();
+const path = require('path');
+const favicon = require('serve-favicon');
 
 // 引入路由
-var userRoutes = require('./routes/user.route');
-var blogRoutes = require('./routes/blog.route');
+const userRoutes = require('./routes/user.route');
+const blogRoutes = require('./routes/blog.route');
 
 // 获取post req body data
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
 
 // MongoDb Connection
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/blog', {useMongoClient: true});
 
 mongoose.connection
@@ -37,10 +37,10 @@ app.use('/api/users', userRoutes);
 app.use('/api/blogs', blogRoutes);
 
 // 设置前端静态文件目录
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 // 设置favicon
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 
 // 服务监听端口
 app.set('port', process.env.PORT || 8080);

@@ -4,9 +4,9 @@ var router = express.Router();
 var userController = require('../controllers/user.controller');
 
 // 登录
-router.get('/login', userController.login);
+router.post('/login', userController.login);
 
 // 注册
-router.post('/create', userController.create);
+router.post('/register', userController.create);
 
 module.exports = router;
