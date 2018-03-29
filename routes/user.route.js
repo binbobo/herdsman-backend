@@ -7,6 +7,6 @@ var userController = require('../controllers/user.controller');
 router.post('/login', userController.login);
 
 // 注册
-router.post('/register', userController.create);
+router.post('/register', userController.register);
 
 module.exports = router;
