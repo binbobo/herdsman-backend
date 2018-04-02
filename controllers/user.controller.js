@@ -10,7 +10,11 @@ const login = function (req, res) {
     if (err) return DBCommonHander.errorHandler(err, res, '检查用户是否存在失败');
     if (user == null) return DBCommonHander.errorHandler(err, res, '用户不存在');
     if (user.password !== req.body.password) return DBCommonHander.errorHandler(err, res, '密码错误');
-    // 设置Cookie 标识当前登陆用户
+    // 设置Session 标识当前登陆用户
+    req.session.user =  {
+      name: user.username,
+      email: user.email
+    }
     return DBCommonHander.successHandler( res, '登陆成功', {
       name: user.username,
       email: user.email
@@ -32,7 +36,13 @@ const register = function (req, res) {
     });
 };
 
-module.exports = {
-  login: login,
-  register: register,
+const logout = function (req, res) {
+  req.session.user = null
+  DBCommonHander.successHandler( res, '退出系统成功', null)
 };
+
+const profile = function (req, res) {
+  DBCommonHander.successHandler( res, '获取profile信息成功', req.session.user)
+};
+
+module.exports = { login, register, profile, logout }
