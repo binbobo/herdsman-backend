@@ -14,6 +14,9 @@ const checkAuthorized = (req, res, next) => {
       success: false
     })
   } else {
+    if (req.url === '/api/users/logout') {
+      req.session.user = null
+    }
     next()
   }
 }

@@ -37,7 +37,6 @@ const register = function (req, res) {
 };
 
 const logout = function (req, res) {
-  req.session.user = null
   DBCommonHander.successHandler( res, '退出系统成功', null)
 };
 
